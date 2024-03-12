@@ -13,7 +13,7 @@
 
   <name>WebApp</name>
 
-  <url>http://localhost:8085</url>
+  <url>http://localhost:9085</url>
 
   <properties>
     <tomcat.version>9.0.45</tomcat.version>

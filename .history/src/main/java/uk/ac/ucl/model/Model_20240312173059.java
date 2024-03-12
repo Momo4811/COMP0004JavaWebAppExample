@@ -22,7 +22,7 @@ public class Model
     List<String> patientNames = new ArrayList<>();
 
     for (int i = 0; i < this.dataFrame.getRowCount(); i++) {
-      String fullName = this.dataFrame.getValue("FIRST", i) + ", " + this.dataFrame.getValue("LAST", i);
+      String fullName = this.dataFrame.getValue("FIRST", i) + ", " + this.dataFrame.getValue("FIRST", i);
       patientNames.add(fullName);
     }
 

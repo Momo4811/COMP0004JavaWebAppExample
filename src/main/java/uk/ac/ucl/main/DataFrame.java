@@ -38,4 +38,14 @@ public class DataFrame {
     public void addValue(String columnName, String value){
         this.columns.get(columnName).addRowValue(value);
     }
+
+    public List<String> getRecord(int row){
+        List<String> record = new ArrayList<>();
+        for (String columnName : this.columnNames){
+            record.add(this.columns.get(columnName).getRowValue(row));
+        }
+        return record;
+    };
 }
+
+

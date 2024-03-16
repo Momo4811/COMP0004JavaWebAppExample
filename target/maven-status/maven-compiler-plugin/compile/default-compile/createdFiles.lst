@@ -5,4 +5,5 @@ uk\ac\ucl\main\Column.class
 uk\ac\ucl\main\Main.class
 uk\ac\ucl\servlets\SearchServlet.class
 uk\ac\ucl\main\DataLoader.class
+uk\ac\ucl\servlets\SearchTabServlet.class
 uk\ac\ucl\servlets\ViewPatientListServlet.class

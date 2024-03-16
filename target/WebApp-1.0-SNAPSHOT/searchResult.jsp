@@ -5,28 +5,35 @@
 <head>
   <jsp:include page="/meta.jsp"/>
   <title>Patient Data App</title>
+  <link rel="stylesheet" type="text/css" href = "styles.css">
 </head>
 <body>
 <jsp:include page="/header.jsp"/>
 <div class="main">
   <h1>Search Result</h1>
   <%
-    List<String> patients = (List<String>) request.getAttribute("result");
+    List<List<String>> patients = (List<List<String>>) request.getAttribute("result");
     if (patients.size() !=0)
     {
-    %>
-    <ul>
+  %>
+    <table name = "results">
       <%
-        for (String patient : patients)
-        {
+      for(List<String> patientRows : patients){
       %>
-      <li><%=patient%></li>
-     <% }
+      <tr>
+        <%
+        for (String patient : patientRows) {
+        %>
+        <td><%=patient%></td>
+        <% }
+        %>
+      </tr>
+      <% }
     } else
     {%>
       <p>Nothing found</p>
   <%}%>
-  </ul>
+  </table>
 </div>
 <jsp:include page="/footer.jsp"/>
 </body>

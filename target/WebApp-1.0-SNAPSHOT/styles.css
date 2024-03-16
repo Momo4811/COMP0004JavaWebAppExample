@@ -1,3 +1,29 @@
 .clearBoth {
   clear: both;
 }
+
+table[name="results"] {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table[name="results"] th, table[name="results"] td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table[name="results"] tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table[name="results"] tr:hover {
+  background-color: #ddd;
+}
+
+table[name="results"] th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}

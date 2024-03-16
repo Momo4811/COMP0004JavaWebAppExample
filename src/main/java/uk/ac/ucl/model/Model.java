@@ -17,6 +17,24 @@ public class Model
   DataFrame dataFrame;
   // The example code in this class should be replaced by your Model class code.
   // The data should be stored in a suitable data structure.
+  public List<String> getHeaderNames() {
+    return this.dataFrame.getColumnNames();
+  }
+
+
+
+  public List<List<String>> getData(String headerName, String searchString){
+    List<List<String>> data = new ArrayList<>();
+    data.add(this.dataFrame.getColumnNames());
+
+    for (int i = 0; i < this.dataFrame.getRowCount(); i++) {
+      if (this.dataFrame.getValue(headerName, i).contains(searchString)) {
+        data.add(this.dataFrame.getRecord(i));
+      }
+    }
+    
+    return data;
+  }
 
   public List<String> getPatientNames() {
     List<String> patientNames = new ArrayList<>();

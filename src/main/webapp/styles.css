@@ -2,9 +2,6 @@
   clear: both;
 }
 
-.mainstuff{
-  color: #4CAF50;
-}
 
 table {
   width: 100%;
@@ -43,7 +40,6 @@ table th {
 }
 
 table tr:first-child th {
-  color: #4CAF50;
   font-weight: bold; /* Make only the first row bold */
   text-align: center;
   font-size: 1em; /* Reset the font size for the first row */

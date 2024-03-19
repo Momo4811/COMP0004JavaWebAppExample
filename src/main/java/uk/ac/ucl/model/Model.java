@@ -4,7 +4,11 @@ import java.io.Reader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -20,8 +24,37 @@ public class Model
   public List<String> getHeaderNames() {
     return this.dataFrame.getColumnNames();
   }
+  
+  public LinkedHashMap<String, Integer> getPeoplePerPlaceSorted(String placeHeader){
+    LinkedHashMap<String, Integer> sortedPeoplePerPlace = new LinkedHashMap<>();
+    HashMap<String, Integer> unsortedPeoplePerPlace = calculatePeoplePerPlace(placeHeader);
+    List<Map.Entry<String, Integer>> tempList = new ArrayList<>(unsortedPeoplePerPlace.entrySet());
+    
+    //Sort By People 
+    tempList.sort(Map.Entry.<String, Integer>comparingByValue().reversed());
 
+    for(Map.Entry<String, Integer> peopleData : tempList){
+      sortedPeoplePerPlace.put(peopleData.getKey(), peopleData.getValue());
+    }
 
+    return sortedPeoplePerPlace;
+  }
+  
+  public HashMap<String, Integer> calculatePeoplePerPlace(String placeHeader){
+    HashMap<String, Integer> peoplePerPlace = new HashMap<>();
+    
+    for(int i = 0; i < this.dataFrame.getRowCount(); i++){
+      String place = this.dataFrame.getValue(placeHeader, i);
+      if(peoplePerPlace.containsKey(place)){
+        peoplePerPlace.put(place, peoplePerPlace.get(place) + 1);
+      } else {
+        peoplePerPlace.put(place, 1);
+      }
+    }
+
+    return peoplePerPlace;
+
+  }
 
   public List<List<String>> getData(String headerName, String searchString){
     List<List<String>> data = new ArrayList<>();

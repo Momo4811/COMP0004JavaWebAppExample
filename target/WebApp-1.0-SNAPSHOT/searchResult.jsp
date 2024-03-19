@@ -5,18 +5,17 @@
 <head>
   <jsp:include page="/meta.jsp"/>
   <title>Patient Data App</title>
-  <link rel="stylesheet" type="text/css" href = "styles.css">
 </head>
 <body>
 <jsp:include page="/header.jsp"/>
 <div class="main">
-  <h1>Search Result</h1>
+  <h1 id="mainstuff">Search Result</h1>
   <%
     List<List<String>> patients = (List<List<String>>) request.getAttribute("result");
     if (patients.size() !=0)
     {
   %>
-    <table name = "results">
+    <table>
       <%
       for(List<String> patientRows : patients){
       %>

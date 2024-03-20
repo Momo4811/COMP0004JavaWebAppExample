@@ -9,7 +9,6 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import uk.ac.ucl.main.DataLoader;
 import uk.ac.ucl.main.DataFrame;
@@ -167,10 +166,6 @@ public class Model {
     return patientNames;
   }
 
-  // This method illustrates how to read csv data from a file.
-  // The data files are stored in the root directory of the project (the directory
-  // your project is in),
-  // in the directory named data.
   public void readFile(String fileName) {
     DataLoader dataLoader = new DataLoader();
     this.dataFrame = dataLoader.createDataFrame(fileName);

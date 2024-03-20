@@ -4,7 +4,6 @@ import uk.ac.ucl.model.Model;
 import uk.ac.ucl.model.ModelFactory;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -53,7 +52,6 @@ public class EditPatientServlet extends HttpServlet {
     List<String> patientDetails = model.getPatientRecord(patientIndex);
     request.setAttribute("patientDetails", patientDetails);
 
-    // Retrieve the column names
     List<String> columnNames = model.getHeaderNames();
     request.setAttribute("columnNames", columnNames);
 

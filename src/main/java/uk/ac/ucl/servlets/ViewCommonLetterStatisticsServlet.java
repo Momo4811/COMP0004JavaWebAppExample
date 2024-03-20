@@ -1,8 +1,6 @@
 package uk.ac.ucl.servlets;
 
 import java.io.IOException;
-import java.util.LinkedHashMap;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

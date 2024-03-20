@@ -11,9 +11,9 @@ import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVPrinter;
 import org.apache.commons.csv.CSVRecord;
 
-/* Requirement 3. Write a class DataLoader that can read a .csv data file and load the data into an
-empty DataFrame. The Column names are found as the first row in the .csv data file. It should
-have a method that returns a filled DataFrame.*/
+// This class is responsible for loading data
+// from a CSV file into a DataFrame object
+// and from a DataFrame object to a CSV file.
 public class DataLoader {
     public void loadCSV(String fileName, DataFrame dataFrame) {
         try (

@@ -18,7 +18,5 @@ public class SaveAsJSONServlet extends HttpServlet {
         model.saveDataAsJson("data/patients100.json");
 
         request.getRequestDispatcher("/runsearch.html").forward(request, response);
-        
-
     }
 }

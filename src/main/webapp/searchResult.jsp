@@ -10,7 +10,7 @@
       font-family: "Helvetica Neue", Arial, sans-serif;
       font-weight: 1;
       font-size: 30px;
-      color: #333; /* Change the color to a dark grey */
+      color: #333; 
     }
     input[type="submit"] {
       margin-left: 0px;
@@ -71,6 +71,5 @@
     <p>Nothing found</p>
 <% } %>
 </div>
-<jsp:include page="/footer.jsp"/>
 </body>
 </html>

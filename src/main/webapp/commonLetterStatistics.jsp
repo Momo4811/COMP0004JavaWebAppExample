@@ -14,18 +14,18 @@
       font-size: 1.2em;
     }
     form {
-      text-align: center; /* Center the buttons */
+      text-align: center; 
   }
 
     .sort {
-      background-color: #333; /* Adjust to a darker color for contrast */
-      color: #fff; /* Adjust to white for contrast */
-      padding: 10px 20px; /* Adjust padding */
-      border: none; /* Remove the border */
-      cursor: pointer; /* Change the cursor when hovering over the button */
-      text-decoration: none; /* Remove the underline */
-      transition: 0.3s; /* Add a transition effect */
-      font-size: 1.1em; /* Increase font size */
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer; 
+      text-decoration: none;
+      transition: 0.3s; 
+      font-size: 1.1em;
       margin-bottom: 10px;
   }
 

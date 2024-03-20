@@ -14,7 +14,7 @@
       font-size: 50px;
       font-weight: 0;
       margin-bottom: 20px;
-      letter-spacing: 1px; /* Increase the spacing between letters */
+      letter-spacing: 1px;
     }
 
     .patientForm {

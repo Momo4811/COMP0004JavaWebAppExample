@@ -12,38 +12,37 @@
         font-size: 50px;
         margin-bottom: 20px;
         font-weight: 0;
-        letter-spacing: 1px; /* Increase the spacing between letters */
+        letter-spacing: 1px; 
       }
       body {
-          font-family: Arial, sans-serif; /* Set the font for the entire page */
+          font-family: Arial, sans-serif; 
       }
       table {
-          width: 50%; /* Limit the width of the table */
-          margin: auto; /* Center the table */
-          border-collapse: collapse; /* Remove the space between the borders of adjacent cells */
+          width: 50%;
+          margin: auto; 
+          border-collapse: collapse;
       }
       th, td {
-          padding: 10px; /* Add some padding to cells */
-          text-align: center; /* Center the text */
-          border: 1px solid #ddd; /* Add a border to the cells */
+          padding: 10px;
+          text-align: center; 
+          border: 1px solid #ddd;
       }
       th {
-          background-color: #f0f0f0; /* Add a background color to headers */
+          background-color: #f0f0f0; 
       }
       form {
-        text-align: center; /* Center the buttons */
+        text-align: center;
     }
 
-    /* Style the buttons */
     .sort {
-        background-color: #333; /* Adjust to a darker color for contrast */
-        color: #fff; /* Adjust to white for contrast */
-        padding: 10px 20px; /* Adjust padding */
-        border: none; /* Remove the border */
-        cursor: pointer; /* Change the cursor when hovering over the button */
-        text-decoration: none; /* Remove the underline */
-        transition: 0.3s; /* Add a transition effect */
-        font-size: 1.1em; /* Increase font size */
+        background-color: #333;
+        color: #fff; 
+        padding: 10px 20px;
+        border: none; 
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.3s;
+        font-size: 1.1em; 
         margin-bottom: 10px;
 
     }

@@ -1,4 +1,3 @@
-<!-- navbar.jsp -->
 <style>
     nav {
       background-color: #333;

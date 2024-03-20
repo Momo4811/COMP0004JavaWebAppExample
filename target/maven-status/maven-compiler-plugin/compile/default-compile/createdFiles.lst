@@ -2,6 +2,7 @@ uk\ac\ucl\model\ModelFactory.class
 uk\ac\ucl\model\Model.class
 uk\ac\ucl\main\DataFrame.class
 uk\ac\ucl\main\Column.class
+uk\ac\ucl\servlets\EditPatientServlet.class
 uk\ac\ucl\main\Main.class
 uk\ac\ucl\servlets\SearchServlet.class
 uk\ac\ucl\main\DataLoader.class

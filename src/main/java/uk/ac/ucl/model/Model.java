@@ -61,12 +61,22 @@ public class Model
     data.add(this.dataFrame.getColumnNames());
 
     for (int i = 0; i < this.dataFrame.getRowCount(); i++) {
-      if (this.dataFrame.getValue(headerName, i).contains(searchString)) {
+      String currentValue = this.dataFrame.getValue(headerName, i).toLowerCase();
+      if (currentValue.contains(searchString.toLowerCase())) {
         data.add(this.dataFrame.getRecord(i));
       }
     }
     
     return data;
+  }
+  public List<String> getPatientDetailsById(String id) {
+    for (int i = 0; i < this.dataFrame.getRowCount(); i++) {
+      if (this.dataFrame.getValue("ID", i).equals(id)) {
+        return this.dataFrame.getRecord(i);
+      }
+    }
+    System.out.println("No patient with the given ID is found");
+    return null; // Return null if no patient with the given ID is found
   }
 
   public List<String> getPatientNames() {

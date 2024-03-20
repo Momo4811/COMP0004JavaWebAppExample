@@ -19,7 +19,7 @@
       <%
       for(List<String> patientRows : patients){
       %>
-      <tr>
+      <tr onclick="window.location='editPatient.html?id=<%=patientRows.get(0)%>'">
         <%
         for (String patient : patientRows) {
         %>

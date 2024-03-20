@@ -12,9 +12,10 @@ import javax.servlet.annotation.WebServlet;
 import uk.ac.ucl.model.Model;
 import uk.ac.ucl.model.ModelFactory;
 
+
 @WebServlet("/oldestPerson.html")
 public class ViewOldestPersonServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+  protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     Model model = ModelFactory.getModel();
     LinkedHashMap<String, String> oldestPerson = model.getOldestPerson();
 

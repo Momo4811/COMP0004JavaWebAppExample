@@ -1,4 +1,5 @@
 package uk.ac.ucl.servlets;
+import uk.ac.ucl.model.ModelFactory;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +15,7 @@ import uk.ac.ucl.model.Model;
 @WebServlet("/saveJSON")
 public class SaveAsJSONServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
-        Model model = (Model) request.getSession().getAttribute("model");
+        Model model = ModelFactory.getModel();
         model.saveDataAsJson("data/patients100.json");
 
         request.getRequestDispatcher("/runsearch.html").forward(request, response);

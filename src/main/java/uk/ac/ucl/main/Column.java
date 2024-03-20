@@ -29,6 +29,10 @@ public class Column {
     public void addRowValue(String value){
         this.rows.add(value);
     }
+
+    public void removeRowValue(int index){
+        this.rows.remove(index);
+    }
 }
 
 // Path: src/main/java/uk/ac/ucl/main/Model.java

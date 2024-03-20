@@ -18,8 +18,8 @@ import java.util.List;
 // you replace it with your data.
 // The url http://localhost:8080/patientList.html is mapped to calling doGet on the servlet object.
 // The servlet object is created automatically, you just provide the class.
-@WebServlet("/statistics.html")
-public class ViewStatisticsServlet extends HttpServlet {
+@WebServlet("/locationStatistics.html")
+public class ViewLocationStatisticsServlet extends HttpServlet {
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
     doPost(request, response);
   }
@@ -38,6 +38,6 @@ public class ViewStatisticsServlet extends HttpServlet {
     LinkedHashMap<String, Integer> sortedPeoplePerPlace = model.getPeoplePerPlaceSorted(sortType);
 
     request.setAttribute("sortedPeoplePerPlace", sortedPeoplePerPlace);
-    request.getRequestDispatcher("/statistics.jsp").forward(request, response);
+    request.getRequestDispatcher("/locationStatistics.jsp").forward(request, response);
   }
 }

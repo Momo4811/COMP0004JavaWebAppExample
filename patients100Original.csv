@@ -1,4 +1,5 @@
 ID,BIRTHDATE,DEATHDATE,SSN,DRIVERS,PASSPORT,PREFIX,FIRST,LAST,SUFFIX,MAIDEN,MARITAL,RACE,ETHNICITY,GENDER,BIRTHPLACE,ADDRESS,CITY,STATE,ZIP
+3e9fd20e-b81c-4698-a7c2-0559e10361fa,1979-08-24,,999-46-5746,S99951588,X43863756X,Mrs.,Norah104,Stamm704,,Hagenes547,M,white,french,F,Hanover  Massachusetts  US,678 Trantow Overpass,New Bedford,Massachusetts,02740
 71917638-8142-42da-87f1-fa0ba642f161,1989-10-21,,999-95-8365,S99995552,X3761822X,Mr.,Eloy929,Dickinson688,,,M,white,english,M,Dover  Massachusetts  US,431 Armstrong Forge,Upton,Massachusetts,01568
 ecd13907-7903-4886-a7f5-f6e687c758c4,2004-10-11,,999-57-6519,,,,Galina98,Murray856,,,,white,irish,F,Barnstable Town  Massachusetts  US,779 Ledner Road Suite 24,Quincy,Massachusetts,02169
 a1dfeccd-86e4-473b-a4ab-bd613db0dc2f,1981-02-05,,999-96-3731,S99930729,X83502942X,Mrs.,Franchesca574,Kuhic920,,Goodwin327,M,white,italian,F,Worcester  Massachusetts  US,619 Stiedemann Rue Unit 49,Grafton,Massachusetts,01519
@@ -8,6 +9,7 @@ af1ee647-2278-4d36-8637-a1d043813116,1971-08-21,,999-96-3303,S99995087,X43449132
 1eb30352-5aba-4fee-9bd2-4487efe0237f,1977-12-03,,999-23-2701,S99926742,X36865919X,Mrs.,Delinda651,Leuschke194,,Lowe577,M,white,french_canadian,F,Berlin  Massachusetts  US,727 Mills Common,Middleborough,Massachusetts,02346
 224ee73f-e6ee-497f-908b-937971ed4f5d,1983-05-07,,999-36-2962,S99993353,X40513715X,Mrs.,Lucile200,Kassulke119,,Denesik803,M,asian,chinese,F,Hong Kong  Hong Kong Special Administrative Region  CN,963 Kovacek Manor,Acton,Massachusetts,01720
 7abcf886-1e35-4d51-8194-ac3a60151a3c,1969-01-05,2008-01-08,999-16-1417,S99950218,X15834921X,Mrs.,Odelia236,Rodriguez71,,Legros616,M,white,irish,F,Newton  Massachusetts  US,662 Grady Wynd Apt 10,Amesbury Town,Massachusetts,01913
+8d2d7a32-cca3-4160-bca8-1a9a1fda87cb,1971-11-30,,999-54-6217,S99960663,X45813664X,Mr.,John539,Funk324,,,M,asian,chinese,M,Macau  Macao Special Administrative Region of the People's Republic of China  CN,881 Ferry Bypass,Rockland,Massachusetts,02370
 3f620118-1054-412a-8feb-1b10f01fa61c,1979-03-31,,999-77-5967,S99960152,X25830373X,Mr.,Brad867,Anderson154,,,M,white,irish,M,Williamstown  Massachusetts  US,504 Yundt Meadow Suite 79,Cambridge,Massachusetts,02138
 30040a13-4e26-419e-acd2-0164a3e02a18,1969-12-30,,999-26-3372,S99944836,X41240732X,Mrs.,Marilu588,Domínquez36,,Cardona494,M,black,west_indian,F,Santo Domingo  National District  DO,771 O'Conner Common,Holyoke,Massachusetts,01040
 e8f86eb9-d5d8-4836-8467-3df2f4ef1b95,1988-05-07,,999-29-5418,S99964020,X38938973X,Mrs.,Leighann368,Murray856,,Krajcik437,M,white,italian,F,Waltham  Massachusetts  US,807 Howell Run,Abington,Massachusetts,02351

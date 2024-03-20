@@ -46,6 +46,12 @@ public class DataFrame {
         }
         return record;
     };
+
+    public void removeRecord(int row){
+        for (String columnName : this.columnNames){
+            this.columns.get(columnName).removeRowValue(row);
+        }
+    };
 }
 
 

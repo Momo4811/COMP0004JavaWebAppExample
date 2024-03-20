@@ -1,54 +1,71 @@
 <%@ page import="java.util.List" %>
 <head>
+  <include file="/meta.jsp"/>
+  <title>Edit Patient Data</title>
   <style>
     body {
       font-family: Arial, sans-serif;
     }
-    h1 {
-      color: #333;
+    
+    h1{
+      font-family: 'Arial', sans-serif;
+      color: black;
+      text-align: center;
+      font-size: 50px;
+      font-weight: 0;
+      margin-bottom: 20px;
+      letter-spacing: 1px; /* Increase the spacing between letters */
     }
-    form {
+
+    .patientForm {
       width: 50%;
       margin: 0 auto;
     }
+
     table {
       width: 100%;
       margin-bottom: 20px;
     }
+
     input[type="text"] {
       width: 100%;
       padding: 10px;
     }
-    input[type="submit"] {
+
+    .patientButton {
       padding: 10px 20px;
       background-color: #4CAF50;
       color: white;
       border: none;
       cursor: pointer;
       text-align: center;
+      text-align: center;
+      text-align: center;
     }
-    input[type="submit"]:hover {
+
+    .buttonContainer {
+      margin-left: 50%;
+    }
+    .patientButton:hover {
       background-color: #45a049;
     }
-    
+
     label {
       font-weight: bold;
     }
-    .button-container {
-      text-align: center;
-      text-align: center;
-      margin-left: 30%; /* adjust this value as needed */
-    }
+
+  </style>
   </style>
 </head>
 <body>
     <h1>Edit Patient</h1>
+    <jsp:include page="/navbar.jsp"/>
     <%
       List<String> patientDetails = (List<String>) request.getAttribute("patientDetails"); 
       List<String> columnNames = (List<String>) request.getAttribute("columnNames");
       String id = (String) request.getAttribute("id");
     %>
-    <form action="UpdatePatientServlet" method="post">
+    <form class="patientForm" (action="editPatient.html?id="+id) method="post">
       <input type="hidden" name="id" value="<%=id%>">
       <table>
       <% 
@@ -62,10 +79,9 @@
       }
       %>
       </table>
-      <div class="button-container">
-        <input type="submit" name="action" value="Update">
-        <input type="submit" name="action" value="Delete">
-        <input type="submit" name="action" value="Add">
+      <div class="buttonContainer">
+        <input class="patientButton" type="submit" name="action" value="Update">
+        <input class="patientButton" type="submit" name="action" value="Delete">
       </div>
     </form>
   </body>

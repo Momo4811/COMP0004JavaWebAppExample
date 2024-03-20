@@ -17,8 +17,29 @@ import java.util.List;
 // The url http://localhost:8080/runsearch.html is mapped to calling doPost on the servlet object.
 // The servlet object is created automatically, you just provide the class.
 @WebServlet("/runsearch.html")
-public class SearchServlet extends HttpServlet
+public class SearchResultsServlet extends HttpServlet
 {
+  protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+  { 
+    // Searches for every patient
+    Model model = ModelFactory.getModel();
+
+    if (request.getParameter("saveAsJson") != null) {
+      model.saveDataAsJson("data/patients100.json");
+    }
+
+        
+    List<String> columnNames = model.getHeaderNames();
+    request.setAttribute("columnNames", columnNames);
+    
+    List<List<String>> searchResult = model.searchFor("ID", "");
+    request.setAttribute("result", searchResult);
+
+    // Sends results to webpage
+    ServletContext context = getServletContext();
+    RequestDispatcher dispatch = context.getRequestDispatcher("/searchResult.jsp");
+    dispatch.forward(request, response);
+  }
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
   {
     // Use the model to do the search and put the results into the request object sent to the
@@ -28,12 +49,14 @@ public class SearchServlet extends HttpServlet
     String headerName = request.getParameter("columnSelection");
     String searchString = request.getParameter("searchString");
 
-    List<List<String>> searchResult = model.getData(headerName, searchString);
+    List<String> columnNames = model.getHeaderNames();
+    request.setAttribute("columnNames", columnNames);
+
+    List<List<String>> searchResult = model.searchFor(headerName, searchString);
     request.setAttribute("result", searchResult);
 
     // Invoke the JSP page.
-    ServletContext context = getServletContext();
-    RequestDispatcher dispatch = context.getRequestDispatcher("/searchResult.jsp");
+    RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/searchResult.jsp");
     dispatch.forward(request, response);
   }
 }

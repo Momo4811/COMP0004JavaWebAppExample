@@ -1,16 +1,32 @@
 package uk.ac.ucl.main;
 
 import java.io.Reader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.IOException;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVPrinter;
 import org.apache.commons.csv.CSVRecord;
 
 /* Requirement 3. Write a class DataLoader that can read a .csv data file and load the data into an
 empty DataFrame. The Column names are found as the first row in the .csv data file. It should
 have a method that returns a filled DataFrame.*/
 public class DataLoader {
+    public void loadCSV(String fileName, DataFrame dataFrame) {
+        try (
+            BufferedWriter writer = Files.newBufferedWriter(Paths.get(fileName));
+            CSVPrinter csvPrinter = CSVFormat.DEFAULT.withHeader(dataFrame.getColumnNames().toArray(new String[0])).print(writer)
+        ) {
+            for (int i = 0; i < dataFrame.getRowCount(); i++) {
+                csvPrinter.printRecord(dataFrame.getRecord(i));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public DataFrame createDataFrame(String fileName) {
         DataFrame dataFrame = new DataFrame();
@@ -36,5 +52,4 @@ public class DataLoader {
         }
         return dataFrame;
     }
-
 }
